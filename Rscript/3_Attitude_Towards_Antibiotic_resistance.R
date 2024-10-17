@@ -8,9 +8,8 @@ library(tidyverse)
 library(gt)
 # Load the dataset
 data<-read_excel("D:/CHIRAL project/AMR_Assignment/AMR_KAP_reproduce/Raw data/AMR_KAP_Data.xlsx")
-#Select the required columns
-data_selected<-data |> 
-  select(12:23)
+data_selected<-data |>  
+  select(24:33)
 # Reshape data from wide to long format
 df_long <- data_selected |> 
   pivot_longer(cols = everything(), 
@@ -31,16 +30,15 @@ ggplot(df_long, aes(y = reorder(Question, desc(Question)), x = Percentage, fill 
             size = 3, color = "black") +            
   scale_fill_manual(values = c("gold", "gray80", "lightblue3")) + 
   theme_minimal() +
-  labs(title = "Figure-1",subtitle = "Distribution of Knowledge on Antibiotic Resistance among Parents of School-Going Children",
+  labs(title = "Figure-2",
+       subtitle = "Attitude towards antibiotic resistance and the misuse of antibiotics among parents of school-going 
+       children (N=704)",
        x = "Percentage", y = NULL, fill = "Response") +
-  theme(legend.position = "bottom",
+  theme(legend.position = "top",
         plot.title = element_text(size = 14, face = "bold"),
         plot.subtitle = element_text(size = 10),
         axis.text.y = element_text(size = 10))
-        ggsave("Figures/Figure1_Distribution_of_Knowledge_of_AMR_among_parents.jpg",width = 14, height = 10)
-
-
-
+ggsave("Figures/Figure2_Attitude_towards_AMR_among_parents.jpg",width = 14, height = 10)
 
 
 
