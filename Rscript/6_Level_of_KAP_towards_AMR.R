@@ -29,7 +29,7 @@ attitude_summary <- data %>%
          Negative_perc = round((Negative / Total) * 100, 0))
 
 practice_summary <- data %>%
-  summarise(Good = sum(`Percentage Practice` >= 80),                 # Replace with correct column
+  summarise(Good = sum(`Percentage Practice` >= 80),      
             Misuse = sum(`Percentage Practice` < 80)) %>%
   mutate(Total = Good + Misuse,
          Good_perc = round((Good / Total) * 100, 0),
