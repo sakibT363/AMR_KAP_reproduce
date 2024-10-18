@@ -1,4 +1,4 @@
-#Figure:1-Distribution of knowledge of antibiotic resistance among parents of school-going children
+#Figure 3. Practices among parents of school-going children regarding antibiotic resistance (N=704).
 # Load necessary libraries
 library(ggplot2)
 library(tidyr)

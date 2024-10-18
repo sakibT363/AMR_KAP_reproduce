@@ -1,4 +1,4 @@
-#Figure:1-Distribution of knowledge of antibiotic resistance among parents of school-going children
+#Figure 2. Attitude towards antibiotic resistance and the misuse of antibiotics among parents of school-going children (N=704).
 # Load necessary libraries
 library(ggplot2)
 library(tidyr)
